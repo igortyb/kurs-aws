@@ -26,7 +26,12 @@ resource "aws_instance" "web" {
 }
 
 module "vm1" {
-  source = "github.com/igortyb/kurs-actions.git"
-  subnet = "pivate-b"
-  name = "vm2" 
+  source = "github.com/piotrkedzio/tf-module-vm.git"
+  subnet = "private-a"
+  name   = "vm1"
+}
+module "vm2" {
+  source = "github.com/piotrkedzio/tf-module-vm.git"
+  subnet = "private-b"
+  name   = "vm2"
 }

@@ -24,3 +24,7 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
+module "vm1" {
+  source = "github.com/igortyb/kurs-actions.git"
+}

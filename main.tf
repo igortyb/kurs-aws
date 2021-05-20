@@ -27,5 +27,6 @@ resource "aws_instance" "web" {
 
 module "vm1" {
   source = "github.com/igortyb/kurs-actions.git"
-  
+  subnet = "pivate-b"
+  name = "vm2" 
 }
